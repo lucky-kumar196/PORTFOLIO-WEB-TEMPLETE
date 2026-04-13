@@ -1,0 +1,616 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Orebella Â· cart</title>
+  <!-- Bootstrap 5 CSS (only grid & utilities, no theme) -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Announcement Bar -->
+    <div class="announcement-bar text-center">
+        <div class="container">
+            <span>20% off 50mL PARFUMS. Discount applied in cart. <a href="#"
+                    class="text-white text-decoration-none ms-1" aria-label="Shop now"><i
+                        class="bi bi-arrow-right"></i></a></span>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+     <div class="modal fade" id="searchModal" tabindex="-1">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content bg-danger text-white mt-5 pt-4">
+
+      <!-- Close Button -->
+      <div class="d-flex justify-content-end p-4 mt-5">
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Search Content -->
+      <div class="modal-body d-flex ms-5">
+
+        <form class="w-75" action="/search" method="get">
+          <div class="border-bottom border-white d-flex align-items-center">
+
+            <input type="search"
+                   name="q"
+                   class="form-control bg-transparent border-0 text-white fs-3 shadow-none"
+                   placeholder="I Am Looking For..."
+                   autocomplete="off">
+
+            <button class="btn text-white fs-4" type="submit"><i class="bi bi-search"></i>
+</button>
+
+          </div>
+        </form>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+    <!-- Sticky Header -->
+    <nav class="navbar navbar-expand-lg bg-white">
+        <div class="container-fluid px-4">
+
+            <!-- Mobile Menu Button -->
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#mobileMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Desktop Navigation -->
+            <div class="collapse navbar-collapse" id="desktopNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-items-lg-center gap-lg-4">
+                    <!-- Shop / Discover (Desktop Mega Dropdown Trigger) -->
+                    <li class="nav-item">
+                        <button type="button"
+                            class="nav-link btn btn-link text-uppercase small border-0 px-1 py-0 desktop-mega-trigger"
+                            data-mega-trigger="shop">
+                            shop
+                        </button>
+                    </li>
+
+                    <li class="nav-item">
+                        <button type="button"
+                            class="nav-link btn btn-link text-uppercase small border-0 px-1 py-0 desktop-mega-trigger"
+                            data-mega-trigger="discover">
+                            discover
+                        </button>
+                    </li>
+
+                    <!-- Search -->
+                    <li class="nav-item">
+                        <a class="nav-link text-uppercase small" href="#" data-bs-toggle="modal" data-bs-target="#searchModal">
+                            <i class="bi bi-search me-1"></i> search
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Logo (Center) -->
+            <a class="navbar-brand position-absolute start-50 translate-middle-x" href="/">
+                <img src="https://orebella.com/cdn/shop/files/OB-SC-Logo_1_2.png" alt="Orebella">
+            </a>
+
+            <!-- Right Icons -->
+            <div class="d-flex align-items-center gap-3">
+                <!-- Country Selector (Desktop) -->
+                <div class="dropdown d-none d-lg-block currency-dropdown">
+                    <button class="btn btn-sm dropdown-toggle currency-toggle" type="button" data-bs-toggle="dropdown">
+                        USD $ | United States
+                    </button>
+                    <ul class="dropdown-menu currency-menu">
+                        <li><a class="dropdown-item currency-item" href="#">USD $ | Canada</a></li>
+                        <li><a class="dropdown-item currency-item" href="#">USD $ | Mexico</a></li>
+                        <li><a class="dropdown-item currency-item active" href="#">USD $ | United States</a></li>
+                    </ul>
+                </div>
+
+                <!-- Search Icon -->
+                <a href="#" class="text-decoration-none text-dark d-none" data-bs-toggle="modal"
+                    data-bs-target="#searchModal">
+                    <i class="bi bi-search"></i>
+                </a>
+
+                <!-- Login -->
+                <a href="login.html"
+                    class="text-decoration-none text-dark d-none d-lg-block text-uppercase small">login</a>
+
+                <!-- Cart -->
+                <button type="button"
+                    class="btn p-0 border-0 bg-transparent text-decoration-none text-dark position-relative text-uppercase small"
+                    data-bs-toggle="offcanvas" data-bs-target="#cartDrawer" aria-controls="cartDrawer">
+                    bag
+                    <span
+                        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark small px-2 py-1">
+                        1
+                    </span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Desktop Mega Dropdown Panel -->
+    <div class="collapse" id="megaMenuCollapse">
+        <div class="mega-menu-panel text-white d-block">
+            <div class="container-fluid px-4">
+                <div class="mega-menu-inner pb-4">
+                    <div class="row g-0 mega-menu-grid">
+                        <div class="col-lg-4 pe-lg-4">
+                            <ul class="list-unstyled mb-0 mega-menu-list" data-mega-panel="shop" role="list">
+                                <li><a href="/collections" class="mega-menu-link" data-mega-image-key="shop-all">SHOP
+                                        ALL</a></li>
+                                <li><a href="/products/eternal-roots" class="mega-menu-link"
+                                        data-mega-image-key="eternal-roots">ETERNAL ROOTS</a></li>
+                                <li><a href="/products/salted-muse" class="mega-menu-link"
+                                        data-mega-image-key="salted-muse">SALTED MUSE</a></li>
+                                <li><a href="/products/blooming-fire" class="mega-menu-link"
+                                        data-mega-image-key="blooming-fire">BLOOMING FIRE</a></li>
+                                <li><a href="/products/window2soul" class="mega-menu-link"
+                                        data-mega-image-key="window2soul">WINDOW2SOUL</a></li>
+                                <li><a href="/products/nightcap-parfum" class="mega-menu-link"
+                                        data-mega-image-key="nightcap">NIGHTCAP</a></li>
+                                <li><a href="/collections/accessories" class="mega-menu-link"
+                                        data-mega-image-key="accessories">THE ACCESSORIES</a></li>
+                                <li><a href="/collections/gift-sets" class="mega-menu-link"
+                                        data-mega-image-key="gift-sets">GIFT SETS</a></li>
+                            </ul>
+
+                            <ul class="list-unstyled mb-0 mega-menu-list d-none" data-mega-panel="discover" role="list">
+                                <li><a href="/pages/bellas-story" class="mega-menu-link"
+                                        data-mega-image-key="bellas-story">BELLA'S STORY</a></li>
+                                <li><a href="/pages/about-us" class="mega-menu-link"
+                                        data-mega-image-key="about-us">ABOUT US</a></li>
+                                <li><a href="/pages/our-formula" class="mega-menu-link"
+                                        data-mega-image-key="our-formula">OUR FORMULA</a></li>
+                                <li><a href="/pages/orebella-alchemy-foundation" class="mega-menu-link"
+                                        data-mega-image-key="alchemy-foundation">ALCHEMY FOUNDATION</a></li>
+                                <li><a href="/pages/store-locator" class="mega-menu-link"
+                                        data-mega-image-key="store-locator">STORE LOCATOR</a></li>
+                                <li><a href="/pages/impact-page" class="mega-menu-link"
+                                        data-mega-image-key="impact">IMPACT</a></li>
+                            </ul>
+
+                            <ul class="mega-secondary-links">
+                                <li><a href="/account/login">MY ACCOUNT</a></li>
+                                <li><a href="/pages/faq">FAQ</a></li>
+                                <li><a href="/pages/privacy-policy">PRIVACY POLICY</a></li>
+                                <li><a href="term&condation.html">TERMS &amp; CONDITIONS</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-2"></div>
+                        <div class="col-lg-5 mega-visual-col">
+                            <div class="mega-image-stage">
+                                <a class="mega-image-block active" data-mega-gallery="shop"
+                                    data-mega-image-key="shop-all" href="/collections" aria-label="Shop All">
+                                    <img src="https://cdn.shopify.com/s/files/1/0815/9762/8735/files/Screenshot_2024-03-27_at_2.30.05_PM.png?v=1711575242"
+                                        alt="Shop All">
+                                </a>
+                                <a class="mega-image-block" data-mega-gallery="shop" data-mega-image-key="eternal-roots"
+                                    href="/products/eternal-roots" aria-label="Eternal Roots">
+                                    <img src="https://cdn.shopify.com/s/files/1/0815/9762/8735/files/Untitled_design_15.png?v=1755064092"
+                                        alt="Eternal Roots">
+                                </a>
+                                <a class="mega-image-block" data-mega-gallery="shop" data-mega-image-key="salted-muse"
+                                    href="/products/salted-muse" aria-label="Salted Muse">
+                                    <img src="https://cdn.shopify.com/s/files/1/0815/9762/8735/files/Mask_group_-_2024-02-12T150022.553.png?v=1707742838"
+                                        alt="Salted Muse">
+                                </a>
+                                <a class="mega-image-block" data-mega-gallery="shop" data-mega-image-key="blooming-fire"
+                                    href="/products/blooming-fire" aria-label="Blooming Fire">
+                                    <img src="https://cdn.shopify.com/s/files/1/0815/9762/8735/files/Group_2874_1_b9bc8ebd-2d1b-4632-85a4-a4fdb5ce40bd.png?v=1707144898"
+                                        alt="Blooming Fire">
+                                </a>
+                                <a class="mega-image-block" data-mega-gallery="shop" data-mega-image-key="window2soul"
+                                    href="/products/window2soul" aria-label="Window2Soul">
+                                    <img src="https://cdn.shopify.com/s/files/1/0815/9762/8735/files/Mask_group_-_2024-02-09T192423.395.png?v=1707499477"
+                                        alt="Window2Soul">
+                                </a>
+                                <a class="mega-image-block" data-mega-gallery="shop" data-mega-image-key="nightcap"
+                                    href="/products/nightcap-parfum" aria-label="Nightcap">
+                                    <img src="https://cdn.shopify.com/s/files/1/0815/9762/8735/files/Nightcap_5.png?v=1724038757"
+                                        alt="Nightcap">
+                                </a>
+                                <a class="mega-image-block" data-mega-gallery="shop" data-mega-image-key="accessories"
+                                    href="/collections/accessories" aria-label="The Accessories">
+                                    <img src="https://cdn.shopify.com/s/files/1/0815/9762/8735/files/MK_Group_100ML_01_2.png?v=1769548533"
+                                        alt="The Accessories">
+                                </a>
+                                <a class="mega-image-block" data-mega-gallery="shop" data-mega-image-key="gift-sets"
+                                    href="/collections/gift-sets" aria-label="Gift Sets">
+                                    <img src="https://orebella.com/cdn/shop/files/HOLIDAY_TRIO_SET_BELLA_D2C.png?v=1726492096"
+                                        alt="Gift Sets">
+                                </a>
+
+                                <a class="mega-image-block d-none" data-mega-gallery="discover"
+                                    data-mega-image-key="bellas-story" href="/pages/bellas-story"
+                                    aria-label="Bella's Story">
+                                    <img src="https://cdn.shopify.com/s/files/1/0815/9762/8735/files/Mask_group_-_2024-02-09T200902.238.png?v=1707502155"
+                                        alt="Bella's Story">
+                                </a>
+                                <a class="mega-image-block d-none" data-mega-gallery="discover"
+                                    data-mega-image-key="about-us" href="/pages/about-us" aria-label="About Us">
+                                    <img src="https://cdn.shopify.com/s/files/1/0815/9762/8735/files/Mask_group_-_2024-02-09T201211.121.png?v=1707502351"
+                                        alt="About Us">
+                                </a>
+                                <a class="mega-image-block d-none" data-mega-gallery="discover"
+                                    data-mega-image-key="our-formula" href="/pages/our-formula"
+                                    aria-label="Our Formula">
+                                    <img src="https://cdn.shopify.com/s/files/1/0815/9762/8735/files/Mask_group_-_2024-02-10T181506.762.png?v=1707581730"
+                                        alt="Our Formula">
+                                </a>
+                                <a class="mega-image-block d-none" data-mega-gallery="discover"
+                                    data-mega-image-key="alchemy-foundation" href="/pages/orebella-alchemy-foundation"
+                                    aria-label="Alchemy Foundation">
+                                    <img src="https://cdn.shopify.com/s/files/1/0815/9762/8735/files/LESGirls.png?v=1714255383"
+                                        alt="Alchemy Foundation">
+                                </a>
+                                <a class="mega-image-block d-none" data-mega-gallery="discover"
+                                    data-mega-image-key="store-locator" href="/pages/store-locator"
+                                    aria-label="Store Locator">
+                                    <img src="https://cdn.shopify.com/s/files/1/0815/9762/8735/files/Mask_group_-_2024-02-09T205359.447.png?v=1707504861"
+                                        alt="Store Locator">
+                                </a>
+                                <a class="mega-image-block d-none" data-mega-gallery="discover"
+                                    data-mega-image-key="impact" href="/pages/impact-page" aria-label="Impact">
+                                    <img src="https://cdn.shopify.com/s/files/1/0815/9762/8735/files/Untitled_design_22.webp?v=1714069797"
+                                        alt="Impact">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-1">
+                            <div class="d-flex justify-content-end mt-5">
+                                <button type="button" class="mega-close-btn" data-mega-close
+                                    aria-label="Close mega menu">
+                                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"
+                                        class="mega-close-icon" viewBox="0 0 15 15" fill="none">
+                                        <path d="M1 14L13.7279 1.27208" stroke="#FAEEEA"></path>
+                                        <path d="M1 1L13.7279 13.7279" stroke="#FAEEEA"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Offcanvas Menu - Exact Replica of Image -->
+    <div class="offcanvas offcanvas-start mobile-menu-offcanvas" tabindex="-1" id="mobileMenu">
+        <div class="offcanvas-header">
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+
+            <!-- SHOP Section -->
+            <h6 class="menu-category">Shop</h6>
+            <nav class="nav flex-column ms-4">
+                <a href="/collections/shop-all" class="mobile-nav-link">Shop All</a>
+                <a href="/products/eternal-roots" class="mobile-nav-link">Eternal Roots</a>
+                <a href="/products/salted-muse" class="mobile-nav-link">Salted Muse</a>
+                <a href="/products/blooming-fire" class="mobile-nav-link">Blooming Fire</a>
+                <a href="/products/window2soul" class="mobile-nav-link">Window2Soul</a>
+                <a href="/products/nightcap" class="mobile-nav-link">Nightcap</a>
+                <a href="/collections/bundles" class="mobile-nav-link">Bundles</a>
+                <a href="/collections/the-accessories" class="mobile-nav-link">The Accessories</a>
+                <a href="/collections/gift-sets" class="mobile-nav-link">Gift Sets</a>
+            </nav>
+
+            <!-- DISCOVER Section -->
+            <h6 class="menu-category">Discover</h6>
+            <nav class="nav flex-column ms-4">
+                <a href="/pages/bellas-story" class="mobile-nav-link">Bella's Story</a>
+                <a href="/pages/about-us" class="mobile-nav-link">About Us</a>
+                <a href="/pages/our-formula" class="mobile-nav-link">Our Formula</a>
+                <a href="/pages/alchemy-foundation" class="mobile-nav-link">Alchemy Foundation</a>
+            </nav>
+
+            <!-- Divider -->
+            <hr class="menu-divider">
+
+            <!-- Utility Links -->
+            <nav class="nav flex-column fs">
+                <a href="/search" class="mobile-nav-link search-link">
+                    <i class="bi bi-search"></i> Search
+                </a>
+                <a href="/account" class="mobile-nav-link">My Account</a>
+                <a href="/pages/faq" class="mobile-nav-link">FAQ</a>
+                <a href="/pages/privacy-policy" class="mobile-nav-link">Privacy Policy</a>
+                <a href="term&condation.html" class="mobile-nav-link">Terms & Conditions</a>
+            </nav>
+
+        </div>
+    </div>
+
+    <!-- Cart Drawer -->
+    <div class="offcanvas offcanvas-end border-0 cart-drawer" tabindex="-1" id="cartDrawer"
+        aria-labelledby="cartDrawerLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title mb-0" id="cartDrawerLabel">Your Cart</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <p class="cart-shipping-note">
+                You have reached free shipping <i class="bi bi-info-circle-fill"></i>
+            </p>
+
+            <div class="cart-item-row">
+                <img src="https://cdn.shopify.com/s/files/1/0815/9762/8735/files/Group_2874_1_b9bc8ebd-2d1b-4632-85a4-a4fdb5ce40bd.png"
+                    alt="Blooming Fire Bundle" class="cart-item-thumb">
+                <div>
+                    <a href="/products/blooming-fire" class="cart-item-name">Blooming Fire Bundle</a>
+                    <div class="cart-item-price">
+                        <span>$155.25</span>
+                        <del>$207.00</del>
+                    </div>
+                </div>
+                <div class="cart-item-actions">
+                    <button type="button" class="btn btn-link" aria-label="Decrease quantity"><i
+                            class="bi bi-dash"></i></button>
+                    <span class="cart-item-qty">1</span>
+                    <button type="button" class="btn btn-link" aria-label="Increase quantity"><i
+                            class="bi bi-plus"></i></button>
+                    <button type="button" class="btn btn-link ms-1" aria-label="Remove item"><i
+                            class="bi bi-trash"></i></button>
+                </div>
+            </div>
+
+            <div class="cart-summary">
+                <div class="cart-total-row">
+                    <span class="cart-total-label">Estimated Total</span>
+                    <span class="cart-total-amount">$155.25</span>
+                </div>
+                <p class="cart-total-note">Taxes, discounts and shipping calculated at checkout</p>
+                <a href="/checkout" class="btn cart-checkout-btn">Check Out</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Search Modal -->
+    <div id="searchOverlay" class="search-overlay">
+    <span class="close-btn" onclick="closeSearch()">âœ•</span>
+
+    <div class="search-box">
+        <input type="text" placeholder="I Am Looking For...">
+        <button>ðŸ”</button>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="container-custom">
+
+    <!-- CART HEADER -->
+    <h1 class="cart-main-title">YOUR CART</h1>
+    <a class="continue-shopping-link" href="shop.html">continue shopping</a>
+
+    <!-- CART ITEMS (3 products with exact details) -->
+    <div class="cart-items-list">
+
+      <!-- 1. PERFUME STAND -->
+      <div class="cart-item-row">
+        <div class="cart-item-image-col">
+          <img class="cart-img" src="https://orebella.com/cdn/shop/files/GeodeBase_1.png?v=1713188310&width=300" alt="PERFUME STAND" loading="lazy">
+        </div>
+        <div class="cart-item-details-col">
+          <div class="product-name">PERFUME STAND FOR 100mL PARFUMS</div>
+          <div class="price">$35.00</div>
+        </div>
+      </div>
+
+      <!-- 2. SALTED MUSE PARFUM -->
+      <div class="cart-item-row">
+        <div class="cart-item-image-col">
+          <img class="cart-img" src="https://orebella.com/cdn/shop/files/SaltedMuse_V5.png?v=1755053779&width=300" alt="SALTED MUSE" loading="lazy">
+        </div>
+        <div class="cart-item-details-col">
+          <div class="product-name">SALTED MUSE PARFUM</div>
+          <div class="product-meta">size: 100ml</div>
+          <div class="price">$100.00</div>
+        </div>
+      </div>
+
+      <!-- 3. 10mL BUNDLE (with compare at price) -->
+      <div class="cart-item-row">
+        <div class="cart-item-image-col">
+          <img class="cart-img" src="https://orebella.com/cdn/shop/files/10mLBundle_04a56699-3dc2-4715-b46d-a62105f36783.png?v=1755060357&width=300" alt="10mL BUNDLE" loading="lazy">
+        </div>
+        <div class="cart-item-details-col">
+          <div class="product-name">10mL BUNDLE</div>
+          <div>
+            <span class="price">$131.25</span>
+            <span class="compare-price">$175.00</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- UPSELL: DON'T MISS OUT (exact product) -->
+    <div class="upsell-wrapper">
+      <div class="upsell-title">Don't miss out on these:</div>
+      <div class="upsell-card">
+        <img class="upsell-card-img" src="https://orebella.com/cdn/shop/files/PDS3closed.png?v=1757647489&width=128" alt="PARFUM DISCOVERY SET">
+        <div class="upsell-card-info">
+          <div class="product-name">PARFUM DISCOVERY SET</div>
+          <div class="upsell-price">$29.00</div>
+        </div>
+        <button class="upsell-add-btn">Add</button>
+      </div>
+    </div>
+
+    <!-- ESTIMATED TOTAL + CHECKOUT -->
+    <div class="cart-totals">
+      <div class="total-top-row">
+        <div class="total-label">ESTIMATED TOTAL</div>
+        <div class="total-amount">$266.25 USD</div>
+      </div>
+      <div class="tax-note">Taxes, discounts and shipping calculated at checkout</div>
+      <button class="cart-checkout-btn">CHECK OUT</button>
+      <div class="cart-express-row">
+        <a class="cart-express-btn cart-express-shop">shop</a>
+        <a class="cart-express-btn cart-express-paypal">PayPal</a>
+        <a class="cart-express-btn cart-express-gpay">G Pay</a>
+      </div>
+    </div>
+
+    <section class="cart-universe-block">
+      <h2 class="cart-universe-title">ENTER THE @OREBELLA UNIVERSE</h2>
+      <div class="cart-social-circle">
+        <a aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+        <a aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        <a aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+        <a aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+      </div>
+    </section>
+
+    <section class="mobile-brand-block">
+      <h2 class="mobile-brand-handle">@OREBELLA</h2>
+      <div class="mobile-brand-icons">
+        <a aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+        <a aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        <a aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+        <a aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+      </div>
+      <div class="mobile-brand-divider">â—¦â—¦</div>
+      <img class="mobile-brand-logo" src="https://cdn.shopify.com/s/files/1/0815/9762/8735/files/unnamed_11_1_1.png?v=1700044488" alt="Orebella gold logo">
+      <div class="mobile-brand-reveal">REVEAL YOUR ALCHEMY</div>
+    </section>
+
+  </div> <!-- end container -->
+
+<!-- footer -->
+    <footer class="orebella-footer">
+
+        <div class="container-fluid footer-shell">
+
+            <!-- TOP SECTION -->
+            <div class="row mb-5 footer-top">
+
+                <!-- NEWSLETTER (Mobile me sabse upar) -->
+                <div class="col-lg-6 col-12 text-center text-lg-end mt-4 p-4 mt-lg-0 order-1 order-lg-4 footer-newsletter">
+                    <h6 class="text-uppercase small fw-semibold mb-4 footer-news-title">
+                        SIGN UP TO BE THE FIRST TO KNOW ABOUT NEW<br>
+                        RELEASES AND EXCLUSIVE OFFERS
+                    </h6>
+
+                    <div class="d-flex justify-content-lg-end mb-3 footer-news-input-wrap">
+                        <div class="input-group w-75 border border-dark footer-news-input">
+                            <input type="email"
+                                class="form-control bg-transparent rounded-0 text-uppercase footer-email"
+                                placeholder="YOUR E-MAIL HERE">
+
+                            <button class="btn rounded-0 text-uppercase fw-semibold px-4 footer-submit" type="button">
+                                Submit
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="form-check d-flex justify-content-lg-end footer-consent">
+                        <input class="form-check-input me-2" type="checkbox">
+                        <label class="form-check-label small">
+                            I have read the privacy policy and I accept the
+                            <u>terms and conditions</u>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- SHOP -->
+                <div class="col-lg-2 col-md-4 col-6 mb-4 order-2 order-lg-1 footer-nav-col shop-col">
+                    <h6 class="text-uppercase fw-semibold small mb-3">Shop</h6>
+                    <ul class="list-unstyled small">
+                        <li><a href="#" class="text-decoration-none text-dark">The Parfums</a></li>
+                        <li class="text-uppercase"><a href="#" class="text-decoration-none text-dark">Eternal Roots</a></li>
+                        <li class="text-uppercase"><a href="#" class="text-decoration-none text-dark">Salted Muse</a></li>
+                        <li class="text-uppercase"><a href="#" class="text-decoration-none text-dark">Blooming Fire</a></li>
+                        <li class="text-uppercase"><a href="#" class="text-decoration-none text-dark">Window2soul</a></li>
+                        <li class="text-uppercase"><a href="#" class="text-decoration-none text-dark">Nightcap</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark">Bundles</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark">The Accessories</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark">Gift Sets</a></li>
+                    </ul>
+                </div>
+
+                <!-- DISCOVER -->
+                <div class="col-lg-2 col-md-4 col-6 mb-4 order-3 order-lg-2 footer-nav-col discover-col">
+                    <h6 class="text-uppercase fw-semibold small mb-3">Discover</h6>
+                    <ul class="list-unstyled small">
+                        <li><a href="#" class="text-decoration-none text-dark">About Us</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark">Bella's Story</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark">Our Formula</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark">Alchemy Foundation</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark">Store Locator</a></li>
+                    </ul>
+                </div>
+
+                <!-- HELP -->
+                <div class="col-lg-2 col-md-4 col-6 mb-4 order-4 order-lg-3 footer-nav-col help-col">
+                    <h6 class="text-uppercase fw-semibold small mb-3">Help</h6>
+                    <ul class="list-unstyled small">
+                        <li><a href="#" class="text-decoration-none text-dark">FAQ</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark">Accessibility View</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark">My Account</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- BIG LOGO -->
+            <div class="row my-5">
+                <div class="col-12 text-center">
+                    <img src="https://cdn.shopify.com/s/files/1/0815/9762/8735/files/orebella-logo-gold_2.png?v=1706890538"
+                        class="img-fluid w-100" alt="Orebella Logo">
+                </div>
+            </div>
+
+            <!-- BOTTOM LINKS -->
+            <div class="row border-top pt-3 pb-4">
+                <div class="col-12">
+                    <div class="footer-bottom-links small text-uppercase">
+                        <button type="button" class="btn p-0 border-0 bg-transparent footer-bottom-btn">&copy; Orebella 2026</button>
+                        <a href="term&condation.html" class="btn p-0 border-0 bg-transparent footer-bottom-btn text-decoration-none">Terms &amp; Conditions</a>
+                        <a href="#" class="btn p-0 border-0 bg-transparent footer-bottom-btn text-decoration-none">Privacy Policy</a>
+                        <a href="#" class="btn p-0 border-0 bg-transparent footer-bottom-btn text-decoration-none">Do Not Sell Or Share</a>
+                        <a href="#" class="btn p-0 border-0 bg-transparent footer-bottom-btn text-decoration-none">Data Subject Request</a>
+                        <a href="#" class="btn p-0 border-0 bg-transparent footer-bottom-btn text-decoration-none">Cookie Settings</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+  <!-- Bootstrap JS (optional for future interactivity) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- tiny script for quantity demo (nonâ€‘functional but looks live) -->
+  <script>
+    (function() {
+      document.querySelector('.upsell-add-btn').addEventListener('click', () => alert('[demo] discovery set added'));
+      document.querySelector('.cart-checkout-btn').addEventListener('click', () => alert('[demo] proceed to checkout'));
+    })();
+  </script>
+  <script src="js/script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+

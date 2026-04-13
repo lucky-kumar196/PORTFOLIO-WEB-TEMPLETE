@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orebella Cart Responsive</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="p-5 text-center">
+        <button class="btn btn-dark" onclick="toggleCart()">OPEN YOUR CART</button>
+    </div>
+
+    <div class="cart-overlay" id="overlay" onclick="toggleCart()"></div>
+
+    <div class="cart-drawer" id="cartDrawer">
+        <div class="cart-header">
+            <h5 class="cart-title">Your cart</h5>
+            <button class="close-btn" type="button" aria-label="Close cart" onclick="toggleCart()"></button>
+        </div>
+
+        <div class="free-ship-bar">
+            Add $40.00 to get Free Standard Shipping
+        </div>
+
+        <div class="cart-content">
+            <div class="cart-product">
+                <img src="https://orebella.com/cdn/shop/files/eternal-roots_10ml_FINAL.png?v=1754868459&width=300"
+                    class="product-img" alt="perfume">
+                <div class="product-details flex-grow-1">
+                    <a href="#" class="product-name-link">ETERNAL ROOTS<br>PARFUM</a>
+                    <div class="product-price">$35.00</div>
+                    <div class="product-size">size: 10mL</div>
+                    <div class="qty-control">
+                        <span class="qty-btn">&minus;</span>
+                        <span class="qty-count">1</span>
+                        <span class="qty-btn">+</span>
+                        <span class="qty-btn ms-auto qty-trash">&#128465;</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="upsell-section">
+                <div class="upsell-head">
+                    <h6 class="upsell-title-head">Don't miss out on these</h6>
+                    <div class="upsell-nav">
+                        <button class="upsell-arrow" type="button" aria-label="Previous"
+                            onclick="moveUpsell(-1)">&lsaquo;</button>
+                        <button class="upsell-arrow" type="button" aria-label="Next"
+                            onclick="moveUpsell(1)">&rsaquo;</button>
+                    </div>
+                </div>
+
+                <div class="upsell-slider">
+                    <div class="upsell-track" id="upsellTrack">
+                        <div class="upsell-slide">
+                            <div class="upsell-item shadow-sm">
+                                <img src="https://cdn.shopify.com/s/files/1/0815/9762/8735/files/Screenshot_2024-08-15_at_8.34.23_AM-removebg_1.png?v=1723725307&width=128"
+                                    alt="item">
+                                <div class="upsell-info">
+                                    <p class="upsell-name">TRAVEL CASE FOR 10mL...</p>
+                                    <div class="upsell-price">$35.00</div>
+                                </div>
+                                <button class="add-btn">+ Add</button>
+                            </div>
+
+                            <div class="upsell-item shadow-sm">
+                                <img src="https://cdn.shopify.com/s/files/1/0815/9762/8735/files/BloomingFire_Mini_V5.png?v=1755054099&width=128"
+                                    alt="item">
+                                <div class="upsell-info">
+                                    <p class="upsell-name">BLOOMING FIRE PARFUM</p>
+                                    <div class="upsell-price">$35.00</div>
+                                </div>
+                                <button class="add-btn">+ Add</button>
+                            </div>
+                        </div>
+
+                        <div class="upsell-slide">
+                            <div class="upsell-item shadow-sm">
+                                <img src="https://cdn.shopify.com/s/files/1/0815/9762/8735/files/Screenshot_2024-08-15_at_8.34.23_AM-removebg_1.png?v=1723725307&width=128"
+                                    alt="item">
+                                <div class="upsell-info">
+                                    <p class="upsell-name">PARFUME STAND FOR 10mL...</p>
+                                    <div class="upsell-price">$35.00</div>
+                                </div>
+                                <button class="add-btn">+ Add</button>
+                            </div>
+
+                            <div class="upsell-item shadow-sm">
+                                <img src="https://cdn.shopify.com/s/files/1/0815/9762/8735/files/BloomingFire_Mini_V5.png?v=1755054099&width=128"
+                                    alt="item">
+                                <div class="upsell-info">
+                                    <p class="upsell-name">PARFUM DISCOVERY SET</p>
+                                    <div class="upsell-price">$29.00</div>
+                                </div>
+                                <button class="add-btn">+ Add</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cart-footer">
+            <div class="total-box">
+                <span>ESTIMATED TOTAL</span>
+                <span>$300.00</span>
+            </div>
+            <div class="tax-text">
+                Taxes, discounts and shipping calculated at checkout
+            </div>
+            <button class="checkout-btn">CHECK OUT</button>
+        </div>
+    </div>
+
+    <script>
+        let upsellIndex = 0;
+        function moveUpsell(direction) {
+            const track = document.getElementById("upsellTrack");
+            if (!track) return;
+            const totalSlides = track.children.length;
+            upsellIndex = (upsellIndex + direction + totalSlides) % totalSlides;
+            track.style.transform = `translateX(-${upsellIndex * 100}%)`;
+        }
+
+        function toggleCart() {
+            document.getElementById("cartDrawer").classList.toggle("active");
+            document.getElementById("overlay").classList.toggle("active");
+            document.body.style.overflow = document.getElementById("cartDrawer").classList.contains("active") ? "hidden" : "auto";
+        }
+    </script>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

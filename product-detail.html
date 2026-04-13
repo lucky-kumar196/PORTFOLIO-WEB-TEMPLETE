@@ -1,0 +1,1142 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Detail | Key Notes</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://use.typekit.net/xfe2tec.css">
+</head>
+<body>
+  <div class="announcement-bar text-center">
+    <div class="container">
+      <span>20% off 50mL PARFUMS. Discount applied in cart. <a href="#" class="text-white text-decoration-none ms-1" aria-label="Shop now"><i class="bi bi-arrow-right"></i></a></span>
+    </div>
+  </div>
+
+  <div class="modal fade" id="searchModal" tabindex="-1">
+    <div class="modal-dialog modal-fullscreen">
+      <div class="modal-content bg-danger text-white mt-5 pt-4">
+        <div class="d-flex justify-content-end p-4 mt-5">
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body d-flex ms-5">
+          <form class="w-75" action="/search" method="get">
+            <div class="border-bottom border-white d-flex align-items-center">
+              <input type="search" name="q" class="form-control bg-transparent border-0 text-white fs-3 shadow-none" placeholder="I Am Looking For..." autocomplete="off">
+              <button class="btn text-white fs-4" type="submit"><i class="bi bi-search"></i></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-expand-lg bg-white">
+    <div class="container-fluid px-4">
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="desktopNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-items-lg-center gap-lg-4">
+          <li class="nav-item">
+            <button type="button" class="nav-link btn btn-link text-uppercase small border-0 px-1 py-0 desktop-mega-trigger" data-mega-trigger="shop">shop</button>
+          </li>
+          <li class="nav-item">
+            <button type="button" class="nav-link btn btn-link text-uppercase small border-0 px-1 py-0 desktop-mega-trigger" data-mega-trigger="discover">discover</button>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-uppercase small" href="#" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="bi bi-search me-1"></i> search</a>
+          </li>
+        </ul>
+      </div>
+
+      <a class="navbar-brand position-absolute start-50 translate-middle-x" href="/">
+        <img src="https://orebella.com/cdn/shop/files/OB-SC-Logo_1_2.png" alt="Orebella">
+      </a>
+
+      <div class="d-flex align-items-center gap-3">
+        <div class="dropdown d-none d-lg-block currency-dropdown">
+          <button class="btn btn-sm dropdown-toggle currency-toggle" type="button" data-bs-toggle="dropdown">USD $ | United States</button>
+          <ul class="dropdown-menu currency-menu">
+            <li><a class="dropdown-item currency-item" href="#">USD $ | Canada</a></li>
+            <li><a class="dropdown-item currency-item" href="#">USD $ | Mexico</a></li>
+            <li><a class="dropdown-item currency-item active" href="#">USD $ | United States</a></li>
+          </ul>
+        </div>
+        <a href="login.html" class="text-decoration-none text-dark d-none d-lg-block text-uppercase small">login</a>
+        <button type="button" class="btn p-0 border-0 bg-transparent text-decoration-none text-dark position-relative text-uppercase small" data-bs-toggle="offcanvas" data-bs-target="#cartDrawer" aria-controls="cartDrawer">
+          bag
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark small px-2 py-1">1</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="collapse" id="megaMenuCollapse">
+    <div class="mega-menu-panel text-white d-block">
+      <div class="container-fluid px-4">
+        <div class="mega-menu-inner pb-4">
+          <div class="row g-0 mega-menu-grid">
+            <div class="col-lg-4 pe-lg-4">
+              <ul class="list-unstyled mb-0 mega-menu-list" data-mega-panel="shop" role="list">
+                <li><a href="/collections" class="mega-menu-link">SHOP ALL</a></li>
+                <li><a href="/products/eternal-roots" class="mega-menu-link">ETERNAL ROOTS</a></li>
+                <li><a href="/products/salted-muse" class="mega-menu-link">SALTED MUSE</a></li>
+                <li><a href="/products/blooming-fire" class="mega-menu-link">BLOOMING FIRE</a></li>
+                <li><a href="/products/window2soul" class="mega-menu-link">WINDOW2SOUL</a></li>
+                <li><a href="/products/nightcap-parfum" class="mega-menu-link">NIGHTCAP</a></li>
+                <li><a href="/collections/accessories" class="mega-menu-link">THE ACCESSORIES</a></li>
+                <li><a href="/collections/gift-sets" class="mega-menu-link">GIFT SETS</a></li>
+              </ul>
+              <ul class="mega-secondary-links">
+                <li><a href="/account/login">MY ACCOUNT</a></li>
+                <li><a href="/pages/faq">FAQ</a></li>
+                <li><a href="/pages/privacy-policy">PRIVACY POLICY</a></li>
+                <li><a href="term&condation.html">TERMS &amp; CONDITIONS</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-lg-5 mega-visual-col">
+              <div class="mega-image-stage">
+                <a class="mega-image-block active" href="/collections" aria-label="Shop All">
+                  <img src="https://cdn.shopify.com/s/files/1/0815/9762/8735/files/Screenshot_2024-03-27_at_2.30.05_PM.png?v=1711575242" alt="Shop All">
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-1">
+              <div class="d-flex justify-content-end mt-5">
+                <button type="button" class="mega-close-btn" data-mega-close aria-label="Close mega menu">
+                  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="mega-close-icon" viewBox="0 0 15 15" fill="none">
+                    <path d="M1 14L13.7279 1.27208" stroke="#FAEEEA"></path>
+                    <path d="M1 1L13.7279 13.7279" stroke="#FAEEEA"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="offcanvas offcanvas-start mobile-menu-offcanvas" tabindex="-1" id="mobileMenu">
+    <div class="offcanvas-header">
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <h6 class="menu-category">Shop</h6>
+      <nav class="nav flex-column ms-4">
+        <a href="/collections/shop-all" class="mobile-nav-link">Shop All</a>
+        <a href="/products/eternal-roots" class="mobile-nav-link">Eternal Roots</a>
+        <a href="/products/salted-muse" class="mobile-nav-link">Salted Muse</a>
+        <a href="/products/blooming-fire" class="mobile-nav-link">Blooming Fire</a>
+        <a href="/products/window2soul" class="mobile-nav-link">Window2Soul</a>
+        <a href="/products/nightcap" class="mobile-nav-link">Nightcap</a>
+        <a href="/collections/bundles" class="mobile-nav-link">Bundles</a>
+        <a href="/collections/the-accessories" class="mobile-nav-link">The Accessories</a>
+        <a href="/collections/gift-sets" class="mobile-nav-link">Gift Sets</a>
+      </nav>
+
+      <h6 class="menu-category">Discover</h6>
+      <nav class="nav flex-column ms-4">
+        <a href="/pages/bellas-story" class="mobile-nav-link">Bella's Story</a>
+        <a href="/pages/about-us" class="mobile-nav-link">About Us</a>
+        <a href="/pages/our-formula" class="mobile-nav-link">Our Formula</a>
+        <a href="/pages/alchemy-foundation" class="mobile-nav-link">Alchemy Foundation</a>
+      </nav>
+
+      <hr class="menu-divider">
+
+      <nav class="nav flex-column fs">
+        <a href="/search" class="mobile-nav-link search-link"><i class="bi bi-search"></i> Search</a>
+        <a href="/account" class="mobile-nav-link">My Account</a>
+        <a href="/pages/faq" class="mobile-nav-link">FAQ</a>
+        <a href="/pages/privacy-policy" class="mobile-nav-link">Privacy Policy</a>
+        <a href="term&condation.html" class="mobile-nav-link">Terms & Conditions</a>
+      </nav>
+    </div>
+  </div>
+
+  <div class="offcanvas offcanvas-end border-0 cart-drawer" tabindex="-1" id="cartDrawer" aria-labelledby="cartDrawerLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title mb-0" id="cartDrawerLabel">Your Cart</h5>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <p class="cart-shipping-note">You have reached free shipping <i class="bi bi-info-circle-fill"></i></p>
+      <div class="cart-item-row">
+        <img src="https://cdn.shopify.com/s/files/1/0815/9762/8735/files/Group_2874_1_b9bc8ebd-2d1b-4632-85a4-a4fdb5ce40bd.png" alt="Blooming Fire Bundle" class="cart-item-thumb">
+        <div>
+          <a href="/products/blooming-fire" class="cart-item-name">Blooming Fire Bundle</a>
+          <div class="cart-item-price">
+            <span>$155.25</span>
+            <del>$207.00</del>
+          </div>
+        </div>
+        <div class="cart-item-actions">
+          <button type="button" class="btn btn-link" aria-label="Decrease quantity"><i class="bi bi-dash"></i></button>
+          <span class="cart-item-qty">1</span>
+          <button type="button" class="btn btn-link" aria-label="Increase quantity"><i class="bi bi-plus"></i></button>
+          <button type="button" class="btn btn-link ms-1" aria-label="Remove item"><i class="bi bi-trash"></i></button>
+        </div>
+      </div>
+      <div class="cart-summary">
+        <div class="cart-total-row">
+          <span class="cart-total-label">Estimated Total</span>
+          <span class="cart-total-amount">$155.25</span>
+        </div>
+        <p class="cart-total-note">Taxes, discounts and shipping calculated at checkout</p>
+        <a href="/checkout" class="btn cart-checkout-btn">Check Out</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-custom">
+        <!-- main product row -->
+        <div class="row g-0">
+            <!-- LEFT: media gallery cloned pixel-level -->
+            <div class="col-md-6 product__media-wrapper position-relative er-media">
+                <div class="er-hero">
+                    <div class="er-badge">20% OFF 50ML. APPLIED IN CART.</div>
+                    <img class="er-hero-img"
+                        src="https://orebella.com/cdn/shop/files/eternal-roots_10ml_FINAL.png?v=1754868459&width=1946"
+                        alt="Eternal Roots 10mL">
+                    <video class="er-hero-video" playsinline muted loop autoplay style="display:none;"></video>
+                    <div class="er-mobile-dots" aria-label="Mobile slider pagination"></div>
+                </div>
+                <div class="er-thumb-slider-wrap" aria-label="Thumbnail slider">
+                    <button class="er-thumb-nav er-thumb-prev" type="button" aria-label="Previous thumbnails">&#10094;</button>
+                    <div class="er-thumb-rail" aria-label="Product thumbnails"></div>
+                    <button class="er-thumb-nav er-thumb-next" type="button" aria-label="Next thumbnails">&#10095;</button>
+                </div>
+            </div>
+
+            <!-- RIGHT: product info -->
+            <div class="col-md-6 right-panel">
+                <div class="er-right-top">
+                    <div class="product__title">
+                        <h1>ETERNAL ROOTS PARFUM</h1>
+                    </div>
+
+                    <div class="er-price-trust-row">
+                        <div class="er-price-line"><span id="productPrice">$35.00</span></div>
+                        <div class="er-trust-pill">
+                            <span class="er-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                            <span>Trusted by 5000+ Women!</span>
+                        </div>
+                    </div>
+
+                    <div class="er-review-row">
+                        <span class="oke-sr-count">191 Reviews</span>
+                    </div>
+
+                    <div class="er-size-head">
+                        <h3 class="er-size-title">Size</h3>
+                        <a href="#" class="er-size-guide" aria-label="Size guide"><i class="bi bi-rulers"></i>SIZE GUIDE</a>
+                    </div>
+
+                    <div class="variant-radios" id="variantRadios">
+                        <input type="radio" name="size" id="size10" value="35.00" data-price="35.00" data-variant="10mL"
+                            checked>
+                        <label for="size10" class="variant-label" data-price="35.00">10mL</label>
+
+                        <input type="radio" name="size" id="size50" value="72.00" data-price="72.00" data-variant="50mL">
+                        <label for="size50" class="variant-label" data-price="72.00">50mL</label>
+
+                        <input type="radio" name="size" id="size100" value="100.00" data-price="100.00" data-variant="100mL"
+                            disabled>
+                        <label for="size100" class="variant-label disabled">100mL</label>
+                    </div>
+
+                    <div class="er-length-block">
+                        <h3 class="er-length-title">Length (in)</h3>
+                        <div class="er-length-grid" role="group" aria-label="Length options">
+                            <button type="button" class="er-length-btn active">50</button>
+                            <button type="button" class="er-length-btn">51</button>
+                            <button type="button" class="er-length-btn">52</button>
+                            <button type="button" class="er-length-btn">53</button>
+                            <button type="button" class="er-length-btn">54</button>
+                            <button type="button" class="er-length-btn">55</button>
+                            <button type="button" class="er-length-btn">56</button>
+                            <button type="button" class="er-length-btn">57</button>
+                            <button type="button" class="er-length-btn">58</button>
+                            <button type="button" class="er-length-btn">59</button>
+                            <button type="button" class="er-length-btn">60</button>
+                        </div>
+                    </div>
+
+                    <div class="er-qty-block">
+                        <h3 class="er-qty-title">QUANTITY</h3>
+                        <div class="er-qty-stepper" role="group" aria-label="Quantity selector">
+                            <button type="button" id="erQtyMinus" aria-label="Decrease quantity">-</button>
+                            <span id="erQtyValue">1</span>
+                            <button type="button" id="erQtyPlus" aria-label="Increase quantity">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="button-block-with-price">
+                    <button class="product-form__submit" id="addToCartBtn">ADD TO CART</button>
+                    <button class="er-gpay-btn" type="button" aria-label="Buy with Google Pay">
+                        <span>Buy with <span class="g-logo">G</span><span class="gpay-word">Pay</span></span>
+                    </button>
+                    <span class="priceBlock-in-BTN visually-hidden" id="dynamicPriceSpan">$35.00</span>
+                </div>
+
+                <!-- afterpay messaging (simplified) -->
+                <div class="afterpay-paragraph mt-3 small">
+                    <a href="#" aria-label="More payment options">More payment options</a>
+                </div>
+
+                <div class="travel-case-card">
+                    <div class="travel-case-media">
+                        <img src="https://orebella.com/cdn/shop/files/Screenshot_2024-08-15_at_8.34.23_AM-removebg_1.png?v=1723725307&width=1445"
+                            alt="Travel case for 10mL">
+                    </div>
+                    <div class="travel-case-content">
+                        <h4 class="travel-case-title">TRAVEL CASE FOR 10 ML</h4>
+                        <p class="travel-case-desc">Protective deluxe cover to hold all 'Orebella 10mL parfums.</p>
+                        <p class="travel-case-note">Perfume sold separately.</p>
+                        <div class="travel-case-cta">
+                            <button type="button">ADD TO CART</button>
+                            <span>$35</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- accordion sections -->
+                <div class="product-meta-custom-accordion mt-4">
+                    <div class="accordion-block open" onclick="toggleAccordion(this)">
+                        <h4 class="accordionLabel-type">fine fragrance notes <span class="plusLabelAccprdion">-</span>
+                        </h4>
+                        <div class="accordionLabel-summary" style="display: block;">
+                            <ul class="ps-3">
+                                <li><strong>Top:</strong> Lychee, Bergamot, Pink Pepper</li>
+                                <li><strong>Middle:</strong> Raspberry Blossom, Pink Sugar, Suede, Labdanum</li>
+                                <li><strong>Base:</strong> Papyrus, Vetiver, Birch Smoke, Patchouli</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-block" onclick="toggleAccordion(this)">
+                        <h4 class="accordionLabel-type">aromatherapy essential oils <span
+                                class="plusLabelAccprdion">+</span></h4>
+                        <div class="accordionLabel-summary">
+                            <ul class="ps-3">
+                                <li><strong>Papyrus Essential Oil:</strong> Earthy and groundingâ€¦</li>
+                                <li><strong>Bergamot Essential Oil:</strong> Bright and upliftingâ€¦</li>
+                                <li><strong>Vetiver Root Essential Oil:</strong> Centering essenceâ€¦</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-block" onclick="toggleAccordion(this)">
+                        <h4 class="accordionLabel-type">'Ã”RELIXIRâ„¢ base <span class="plusLabelAccprdion">+</span></h4>
+                        <div class="accordionLabel-summary">
+                            Snow Mushroom, Camellia Oil, Sweet Almond Oil, Olive Oil, Jojoba Oil, Shea Oil
+                        </div>
+                    </div>
+                    <div class="accordion-block" onclick="toggleAccordion(this)">
+                        <h4 class="accordionLabel-type">full ingredients <span class="plusLabelAccprdion">+</span></h4>
+                        <div class="accordionLabel-summary small">
+                            WATER, BUTYLENE GLYCOL, FRAGRANCE*, GLYCERIN, ISODODECANE, â€¦ (truncated for brevity)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+  <!-- <section class="notes-benefits-bar">
+    <div class="container-fluid px-3 px-lg-4">
+      <ul class="notes-benefits">
+        <li>CLEAN</li>
+        <li>VEGAN</li>
+        <li>CRUELTY-FREE</li>
+        <li>DERMATOLOGIST TESTED</li>
+        <li>SUITABLE FOR SENSITIVE SKIN</li>
+        <li>LASTS ALL DAY</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="notes-hero">
+    <div class="container-fluid h-100 position-relative">
+      <h1 class="notes-title">KEY<br/><span>NOTES</span></h1>
+
+      <div class="note-item note-lychee">
+        <h3>LYCHEE</h3>
+        <p>Radiates juicy brightness and a soft, irresistible sweetness.</p>
+      </div>
+
+      <div class="note-item note-vetiver">
+        <h3>VETIVER</h3>
+        <p>Grounds with earthy depth and cool smoke.</p>
+      </div>
+
+      <div class="note-item note-papyrus">
+        <h3>PAPYRUS</h3>
+        <p>Brings a dry, woody clarity and freshness.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bella-inspiration">
+    <div class="bella-inspiration-wrap">
+      <div class="bella-inspiration-copy">
+        <h2>BELLA'S INSPIRATION</h2>
+        <img
+          src="https://cdn.shopify.com/s/files/1/0815/9762/8735/files/ER_BELLA_QUOTE_PDP.png?v=1754237634"
+          alt="A tribute to personal growth quote"
+          class="bella-inspiration-quote"
+          onerror="this.onerror=null;this.src='https://orebella.com/cdn/shop/files/ER_BELLA_QUOTE_PDP.png?v=1754237634';"
+        />
+        <div class="bella-signature">Bella Hadid</div>
+      </div>
+
+      <div class="bella-inspiration-video-wrap">
+        <div class="bella-video-shell">
+          <video autoplay muted loop playsinline aria-label="Bella inspiration video">
+            <source src="https://orebella.com/cdn/shop/videos/c/vp/32c6ec760a42410f9a25adb7d281afa8/32c6ec760a42410f9a25adb7d281afa8.HD-1080p-2.5Mbps-54796602.mp4?v=0" type="video/mp4" />
+          </video>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="magnet-section">
+    <div class="magnet-wrap order-1 order-md-2">
+      <div class="magnet-copy">
+        <div class="magnet-copy-inner">
+          <h2 class="magnet-title">A MAGNET FOR THE LIFE YOU WANT TO ATTRACT</h2>
+          <p class="magnet-poem">ASCEND THE TREE OF LIFE,
+RISE TO THE SKY
+CONNECTED AND GROUNDED
+AS STRENGTH LIFTS HIGH
+
+BRANCHES REACH OUT,
+THE SPIRIT IGNITES
+A BRIDGE UNITING EARTH
+AND ENDLESS HEIGHTS
+
+LEVITATING HIGHER,
+LIGHT AND FREE
+THE ESSENCE RISES,
+FILLED WITH JOY AND SERENITY</p>
+        </div>
+      </div>
+
+      <div class="magnet-video-wrap order-2 order-md-1">
+        <div class="magnet-video-top">
+          <video autoplay muted loop playsinline aria-label="A magnet for the life video">
+            <source src="https://orebella.com/cdn/shop/videos/c/vp/32c6ec760a42410f9a25adb7d281afa8/32c6ec760a42410f9a25adb7d281afa8.HD-1080p-2.5Mbps-54796602.mp4?v=0" type="video/mp4" />
+          </video>
+        </div>
+        <div class="magnet-video-bottom d-block d-md-none order-3" aria-hidden="true"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="nourish-section">
+    <div class="nourish-wrap">
+      <div class="nourish-video-box order-2 order-md-1">
+        <video loop autoplay muted playsinline preload="metadata" aria-label="Shake well product video">
+          <source src="https://cdn.shopify.com/videos/c/o/v/bfe837965c5c46fa87eef4c6674f566a.mov" type="video/mp4" />
+        </video>
+      </div>
+
+      <div class="nourish-content oreder-1 order-md-2">
+        <h4 class="nourish-label">A NEW ERA OF FRAGRANCE</h4>
+        <h2 class="nourish-title">NOURISH YOUR SKIN + SOUL</h2>
+        <p class="nourish-body">Our signature bi-phase formula features two layers that are activated with a shake to infuse with and last on the skin.</p>
+
+        <h3 class="nourish-subtitle">THE POWER OF TWO</h3>
+        <h4 class="nourish-block-title">NOURISHING 'ORELIXIR BASE</h4>
+        <p class="nourish-copy">The first layer nourishes with its proprietary 'Orelixir base, crafted from hydrating snow mushroom and a moisturizing five-oil blend (camellia, almond, olive, jojoba, shea), while also extending the scent's potency and longevity.</p>
+
+        <div class="nourish-plus">+</div>
+
+        <h4 class="nourish-block-title">AURA-ELEVATING SCENTS</h4>
+        <p class="nourish-copy">The second layer boosts both mood and aura with memorable blends of aromatherapy essential oils and fine fragrance notes, all crafted from the highest quality, responsibly sourced ingredients.</p>
+      </div>
+    </div>
+    <div class="nourish-shake">Shake well</div>
+  </section> -->
+
+
+  <section class="reviews-section">
+            <h2 class="reviews-title">REVIEWS</h2>
+
+            <div class="reviews-summary">
+                <div>
+                    <div class="reviews-score-line">
+                        <strong>4.7</strong>
+                        <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                        <div class="reviews-based">Based on 191 reviews</div>
+                    </div>
+
+                    <div class="rating-bars">
+                        <div class="rating-row">
+                            <span class="label">5 <span>&#9733;</span></span>
+                            <span class="rating-bar"><i style="width:80%;"></i></span>
+                            <span>153</span>
+                        </div>
+                        <div class="rating-row">
+                            <span class="label">4 <span>&#9733;</span></span>
+                            <span class="rating-bar"><i style="width:11.5%;"></i></span>
+                            <span>22</span>
+                        </div>
+                        <div class="rating-row">
+                            <span class="label">3 <span>&#9733;</span></span>
+                            <span class="rating-bar"><i style="width:4.7%;"></i></span>
+                            <span>9</span>
+                        </div>
+                        <div class="rating-row">
+                            <span class="label">2 <span>&#9733;</span></span>
+                            <span class="rating-bar"><i style="width:2.1%;"></i></span>
+                            <span>4</span>
+                        </div>
+                        <div class="rating-row">
+                            <span class="label">1 <span>&#9733;</span></span>
+                            <span class="rating-bar"><i style="width:1.6%;"></i></span>
+                            <span>3</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reviews-media-shell">
+                    <button class="reviews-media-nav reviews-media-prev" type="button" aria-label="Previous review media">&#10094;</button>
+                    <div class="reviews-media">
+                        <div class="review-media-item"><img
+                                src="https://orebella.com/cdn/shop/files/SS_EternalRoots_Group_wide_collection.jpg?v=1754516688&width=360"
+                                alt="Customer media 1"></div>
+                        <div class="review-media-item video"><img
+                                src="https://orebella.com/cdn/shop/files/BELLA_CAMPAIGN_4x5_bddc50bc-b3cd-484c-9673-18d3b912fe21.jpg?v=1754516688&width=360"
+                                alt="Customer media 2"></div>
+                        <div class="review-media-item"><img
+                                src="https://orebella.com/cdn/shop/files/PDP_AI_INGREDIENTS_IMAGES_ER_1X1_R2.jpg?v=1754516688&width=360"
+                                alt="Customer media 3"></div>
+                        <div class="review-media-item"><img
+                                src="https://orebella.com/cdn/shop/files/Bi-Phase_PDP_ER_V4.jpg?v=1754587435&width=360"
+                                alt="Customer media 4"></div>
+                        <div class="review-media-item"><img
+                                src="https://orebella.com/cdn/shop/files/ORBL02_Day2_0524_F4_2.jpg?v=1754516688&width=360"
+                                alt="Customer media 5"></div>
+                    </div>
+                    <button class="reviews-media-nav reviews-media-next" type="button" aria-label="Next review media">&#10095;</button>
+                </div>
+            </div>
+
+            <div class="reviews-actions">
+                <button type="button" class="btn-reviews">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M3 5h18M6.5 11h11M10 17h4" />
+                    </svg>
+                    FILTERS
+                </button>
+                <button type="button" class="btn-reviews">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                            d="M3 21l3.7-.8L19 7.9a1.7 1.7 0 0 0 0-2.4l-.5-.5a1.7 1.7 0 0 0-2.4 0L3.8 17.3 3 21zM14 7l3 3" />
+                    </svg>
+                    WRITE A REVIEW
+                </button>
+            </div>
+
+            <div class="reviews-count">
+                <span>191 reviews</span>
+                <span class="sort-label">
+                    <b>SORT</b>
+                    <span class="sort-select-wrap">
+                        <select class="sort-select" aria-label="Sort reviews">
+                            <option selected>Most Recent</option>
+                            <option>Highest Rating</option>
+                            <option>Lowest Rating</option>
+                            <option>Most Helpful</option>
+                        </select>
+                    </span>
+                </span>
+            </div>
+
+            <article class="review-card">
+                <div class="review-head">
+                    <div class="review-user">
+                        <span class="review-avatar">A</span>
+                        <span class="review-name">Alejandra</span>
+                    </div>
+                    <span class="review-date">Yesterday</span>
+                </div>
+                <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <h3 class="review-title">5 Stars</h3>
+                <p class="review-body">love it</p>
+                <div class="review-help-row">
+                    <span class="review-verified-shop">Verified by shop</span>
+                   <div>
+                     <span>Was this helpful?</span>
+                    <span class="vote">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M9 22H5a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h4v11zM22 10.4A2.4 2.4 0 0 0 19.6 8H14l.8-3.6V4a2 2 0 0 0-.6-1.4L13 1 6.6 7.4A2 2 0 0 0 6 8.8V20a2 2 0 0 0 2 2h8.4a2 2 0 0 0 1.9-1.4l2.7-8.1c.1-.3.1-.7.1-1.1z" />
+                        </svg>
+                        0
+                    </span>
+                    <span class="vote">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M15 2h4a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2h-4V2zM2 13.6A2.4 2.4 0 0 0 4.4 16H10l-.8 3.6v.4a2 2 0 0 0 .6 1.4L11 23l6.4-6.4A2 2 0 0 0 18 15.2V4a2 2 0 0 0-2-2H7.6a2 2 0 0 0-1.9 1.4L3 11.5c-.1.3-.1.7-.1 1.1z" />
+                        </svg>
+                        0
+                    </span>
+                   </div>
+                </div>
+            </article>
+
+            <article class="review-card">
+                <div class="review-head">
+                    <div class="review-user">
+                        <span class="review-avatar">C</span>
+                        <span class="review-name-wrap">
+                            <span class="review-name">Camelia</span>
+                            <span class="review-verified">Verified Buyer <span class="dot"></span></span>
+                        </span>
+                    </div>
+                    <span class="review-date">1 week ago</span>
+                </div>
+                <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <h3 class="review-title">Mesmerizing Scent</h3>
+                <p class="review-body">I blindly bought this (before smelling) and absolutely love it. It is a great mix
+                    of sweet and earthy and is definitely made for all genders. My skin is also annoyingly sensitive,
+                    and the absence of alcohol in this parfum doesn't make my skin burn like others have.</p>
+                <p class="review-body">My ONLY gripe, is the top of the larger sizes (50ml and 100ml) being difficult to
+                    remove. My wrists are sometimes weak, and even with having lotion on my hands, the top is a pain to
+                    pull off. If there is something that could be design-wise to make it easier to remove, that'd be
+                    wonderful.</p>
+                <div class="review-help-row">
+                    <span>Was this helpful?</span>
+                    <div>
+                      <span class="vote">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M9 22H5a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h4v11zM22 10.4A2.4 2.4 0 0 0 19.6 8H14l.8-3.6V4a2 2 0 0 0-.6-1.4L13 1 6.6 7.4A2 2 0 0 0 6 8.8V20a2 2 0 0 0 2 2h8.4a2 2 0 0 0 1.9-1.4l2.7-8.1c.1-.3.1-.7.1-1.1z" />
+                        </svg>
+                        1
+                    </span>
+                    <span class="vote">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M15 2h4a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2h-4V2zM2 13.6A2.4 2.4 0 0 0 4.4 16H10l-.8 3.6v.4a2 2 0 0 0 .6 1.4L11 23l6.4-6.4A2 2 0 0 0 18 15.2V4a2 2 0 0 0-2-2H7.6a2 2 0 0 0-1.9 1.4L3 11.5c-.1.3-.1.7-.1 1.1z" />
+                        </svg>
+                        0
+                    </span>
+                    </div>
+                </div>
+            </article>
+
+        </section>
+    </div>
+<div class="container-fluid d-flex flex-column justify-content-between">
+
+        <!-- Top Section -->
+
+    <section class="collection-slider-section" aria-label="Explore the collection">
+      <div class="collection-slider-wrap">
+        <button class="collection-nav prev" type="button" aria-label="Previous slide">&#8249;</button>
+        <div class="collection-slider-track" id="collectionSliderTrack">
+          <article class="collection-slide">
+            <img src="https://orebella.com/cdn/shop/files/Mask_group_10__V1.jpg?v=1711647008&width=1600" alt="Salted Muse background" class="collection-slide-bg">
+            <img src="https://orebella.com/cdn/shop/files/salted_muse_2_4_5e8f8148-62b3-424f-b0c3-be6ad553ee81.png?v=1714088410&width=400" alt="Salted Muse bottle" class="collection-slide-bottle">
+            <div class="collection-slide-copy">
+              <h3 class="collection-slide-title">SALTED MUSE</h3>
+              <div>
+                <p class="collection-slide-notes">WOODY MARINE<span>SEA SALT, OLIVE TREE, CEDARWOOD</span></p>
+                <a class="collection-slide-link">SHOP SCENT</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="collection-slide">
+            <img src="https://orebella.com/cdn/shop/files/ORBL01_StillLife_Day2_1029_F4_RGB_EDITED_72dpi_1.jpg?v=1720465364&width=1600" alt="Nightcap background" class="collection-slide-bg">
+            <img src="https://orebella.com/cdn/shop/files/nightcap_1_508f39db-4b1c-4d1a-9813-ac55d1785cb5.png?v=1721402429&width=400" alt="Nightcap bottle" class="collection-slide-bottle">
+            <div class="collection-slide-copy">
+              <h3 class="collection-slide-title">NIGHTCAP</h3>
+              <div>
+                <p class="collection-slide-notes">WARM &amp; SPICY<span>VANILLA, GINGER, SANDALWOOD</span></p>
+                <a class="collection-slide-link">SHOP SCENT</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="collection-slide">
+            <img src="https://orebella.com/cdn/shop/files/Mask_group_8__V3_1.jpg?v=1711646976&width=1600" alt="Window2Soul background" class="collection-slide-bg">
+            <img src="https://orebella.com/cdn/shop/files/Window2Soul_4_04d647e5-f12b-4f36-b8fc-b3a526d6fd29.png?v=1706631777&width=400" alt="Window2Soul bottle" class="collection-slide-bottle">
+            <div class="collection-slide-copy">
+              <h3 class="collection-slide-title">WINDOW2SOUL</h3>
+              <div>
+                <p class="collection-slide-notes">SHEER FLORAL<span>JASMINE, ROSE, TONKA BEAN</span></p>
+                <a class="collection-slide-link">SHOP SCENT</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="collection-slide">
+            <img src="https://orebella.com/cdn/shop/files/Mask_group_9__V1.jpg?v=1711646989&width=1600" alt="Blooming Fire background" class="collection-slide-bg">
+            <img src="https://orebella.com/cdn/shop/files/blooming_fire_1.png?v=1706632248&width=400" alt="Blooming Fire bottle" class="collection-slide-bottle">
+            <div class="collection-slide-copy">
+              <h3 class="collection-slide-title">BLOOMING FIRE</h3>
+              <div>
+                <p class="collection-slide-notes">WARM FLORAL<span>MONOI, BERGAMOT, PATCHOULI</span></p>
+                <a class="collection-slide-link">SHOP SCENT</a>
+              </div>
+            </div>
+          </article>
+        </div>
+        <button class="collection-nav next" type="button" aria-label="Next slide">&#8250;</button>
+      </div>
+    </section>
+
+         <div class="text-center mb-5 pb-2 pt-5">
+
+            <div class="d-inline-block px-3 py-2">
+                <h1 class="display-5 fw-semibold text-dark m-0 text-uppercase">
+                    ENTER THE @OREBELLA UNIVERSE
+                </h1>
+            </div>
+
+            <!-- Social Icons -->
+            <div class="mt-4">
+                <i class="bi bi-tiktok fs-3 mx-1"></i>
+                <i class="bi bi-instagram fs-3 mx-1"></i>
+                <i class="bi bi-facebook fs-3 mx-1"></i>
+                <i class="bi bi-youtube fs-3 mx-1"></i>
+            </div>
+
+        </div>
+
+        <!-- Bottom Section -->
+        <div class="text-center ">
+
+            <!-- Gold Circle Logo -->
+            <div class="d-flex align-items-center justify-content-center mx-auto mb-4">
+                <img src="https://cdn.shopify.com/s/files/1/0815/9762/8735/files/unnamed_11_1_1.png?v=1700044488"
+                    alt="">
+            </div>
+
+            <h2 class="display-6 text-uppercase fw-semibold">
+                REVEAL YOUR ALCHEMY
+            </h2>
+
+        </div>
+
+    </div>
+
+    <footer class="orebella-footer">
+      <div class="container-fluid footer-shell">
+        <div class="row mb-5 footer-top">
+          <div class="col-lg-6 col-12 text-center text-lg-end mt-4 p-4 mt-lg-0 order-1 order-lg-4 footer-newsletter">
+            <h6 class="text-uppercase small fw-semibold mb-4 footer-news-title">
+              SIGN UP TO BE THE FIRST TO KNOW ABOUT NEW<br>
+              RELEASES AND EXCLUSIVE OFFERS
+            </h6>
+
+            <div class="d-flex justify-content-lg-end mb-3 footer-news-input-wrap">
+              <div class="input-group w-75 border border-dark footer-news-input">
+                <input type="email" class="form-control bg-transparent rounded-0 text-uppercase footer-email" placeholder="YOUR E-MAIL HERE">
+                <button class="btn rounded-0 text-uppercase fw-semibold px-4 footer-submit" type="button">Submit</button>
+              </div>
+            </div>
+
+            <div class="form-check d-flex justify-content-lg-end footer-consent">
+              <input class="form-check-input me-2" type="checkbox">
+              <label class="form-check-label small">
+                I have read the privacy policy and I accept the <u>terms and conditions</u>
+              </label>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 mb-4 order-2 order-lg-1 footer-nav-col shop-col">
+            <h6 class="text-uppercase fw-semibold small mb-3">Shop</h6>
+            <ul class="list-unstyled small">
+              <li><a href="#" class="text-decoration-none text-dark">The Parfums</a></li>
+              <li class="text-uppercase"><a href="#" class="text-decoration-none text-dark">Eternal Roots</a></li>
+              <li class="text-uppercase"><a href="#" class="text-decoration-none text-dark">Salted Muse</a></li>
+              <li class="text-uppercase"><a href="#" class="text-decoration-none text-dark">Blooming Fire</a></li>
+              <li class="text-uppercase"><a href="#" class="text-decoration-none text-dark">Window2soul</a></li>
+              <li class="text-uppercase"><a href="#" class="text-decoration-none text-dark">Nightcap</a></li>
+              <li><a href="#" class="text-decoration-none text-dark">Bundles</a></li>
+              <li><a href="#" class="text-decoration-none text-dark">The Accessories</a></li>
+              <li><a href="#" class="text-decoration-none text-dark">Gift Sets</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 mb-4 order-3 order-lg-2 footer-nav-col discover-col">
+            <h6 class="text-uppercase fw-semibold small mb-3">Discover</h6>
+            <ul class="list-unstyled small">
+              <li><a href="#" class="text-decoration-none text-dark">About Us</a></li>
+              <li><a href="#" class="text-decoration-none text-dark">Bella's Story</a></li>
+              <li><a href="#" class="text-decoration-none text-dark">Our Formula</a></li>
+              <li><a href="#" class="text-decoration-none text-dark">Alchemy Foundation</a></li>
+              <li><a href="#" class="text-decoration-none text-dark">Store Locator</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 mb-4 order-4 order-lg-3 footer-nav-col help-col">
+            <h6 class="text-uppercase fw-semibold small mb-3">Help</h6>
+            <ul class="list-unstyled small">
+              <li><a href="#" class="text-decoration-none text-dark">FAQ</a></li>
+              <li><a href="#" class="text-decoration-none text-dark">Accessibility View</a></li>
+              <li><a href="#" class="text-decoration-none text-dark">My Account</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row my-5">
+          <div class="col-12 text-center">
+            <img src="https://cdn.shopify.com/s/files/1/0815/9762/8735/files/orebella-logo-gold_2.png?v=1706890538" class="img-fluid w-100" alt="Orebella Logo">
+          </div>
+        </div>
+
+        <div class="row border-top pt-3 pb-4">
+          <div class="col-12">
+            <div class="footer-bottom-links small text-uppercase">
+              <button type="button" class="btn p-0 border-0 bg-transparent footer-bottom-btn">&copy; Orebella 2026</button>
+              <a href="term&condation.html" class="btn p-0 border-0 bg-transparent footer-bottom-btn text-decoration-none">Terms &amp; Conditions</a>
+              <a href="#" class="btn p-0 border-0 bg-transparent footer-bottom-btn text-decoration-none">Privacy Policy</a>
+              <a href="#" class="btn p-0 border-0 bg-transparent footer-bottom-btn text-decoration-none">Do Not Sell Or Share</a>
+              <a href="#" class="btn p-0 border-0 bg-transparent footer-bottom-btn text-decoration-none">Data Subject Request</a>
+              <a href="#" class="btn p-0 border-0 bg-transparent footer-bottom-btn text-decoration-none">Cookie Settings</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- SVG definitions for star (hidden) -->
+    <svg style="display:none;">
+        <defs>
+            <symbol id="star-filled" viewBox="0 0 79 14">
+                <path fill="currentColor"
+                    d="M8.1 0l2 5.3 5.7.1-4.3 3.7 1.3 5.6-4.7-3.1-4.7 3.1 1.3-5.6-4.3-3.7 5.7-.1L8.1 0zM24.3 0l2 5.3 5.7.1-4.3 3.7 1.3 5.6-4.7-3.1-4.7 3.1 1.3-5.6-4.3-3.7 5.7-.1L24.3 0zM40.5 0l2 5.3 5.7.1-4.3 3.7 1.3 5.6-4.7-3.1-4.7 3.1 1.3-5.6-4.3-3.7 5.7-.1L40.5 0zM56.7 0l2 5.3 5.7.1-4.3 3.7 1.3 5.6-4.7-3.1-4.7 3.1 1.3-5.6-4.3-3.7 5.7-.1L56.7 0zM72.9 0l2 5.3 5.7.1-4.3 3.7 1.3 5.6-4.7-3.1-4.7 3.1 1.3-5.6-4.3-3.7 5.7-.1L72.9 0z" />
+            </symbol>
+        </defs>
+    </svg>
+
+    <!-- JavaScript for interactions -->
+    <script>
+        // ----- PDP media column (vertical thumbs + hero) -----
+        const media = [
+            { src: "https://orebella.com/cdn/shop/files/SS_EternalRoots_Group_wide_collection.jpg?v=1754516688&width=2048", alt: "Collection layout" },
+            { src: "https://orebella.com/cdn/shop/files/BELLA_CAMPAIGN_4x5_bddc50bc-b3cd-484c-9673-18d3b912fe21.jpg?v=1754516688&width=2048", alt: "Lifestyle shot" },
+            { src: "https://orebella.com/cdn/shop/files/ORBL02_Day2_0524_F4_2.jpg?v=1754516688&width=2048", alt: "Forest still" },
+            { src: "https://orebella.com/cdn/shop/files/PDP_AI_INGREDIENTS_IMAGES_ER_1X1_R2.jpg?v=1754516688&width=2048", alt: "Key notes card" },
+            { src: "https://orebella.com/cdn/shop/files/Bi-Phase_PDP_ER_V4.jpg?v=1754587435&width=2048", alt: "Bi-phase formula" },
+            {
+                type: "video",
+                src: "https://orebella.com/cdn/shop/videos/c/vp/9752ea63a3594b2ebc9176b00d35fed6/9752ea63a3594b2ebc9176b00d35fed6.HD-1080p-7.2Mbps-54643187.mp4?v=0",
+                thumb: "https://orebella.com/cdn/shop/files/preview_images/9752ea63a3594b2ebc9176b00d35fed6.thumbnail.0000000000.jpg?v=1754868364&width=2048",
+                alt: "Campaign video"
+            },
+            { src: "https://orebella.com/cdn/shop/files/eternal-roots_10ml_FINAL.png?v=1754868459&width=1946", alt: "10 mL bottle", isBottle: true },
+        ];
+
+        const rail = document.querySelector('.er-thumb-rail');
+        const thumbPrev = document.querySelector('.er-thumb-prev');
+        const thumbNext = document.querySelector('.er-thumb-next');
+        const hero = document.querySelector('.er-hero-img');
+        const heroVideo = document.querySelector('.er-hero-video');
+        const dots = document.querySelector('.er-mobile-dots');
+        let idx = 6; // default hero on 10 mL
+
+        function renderThumbs() {
+            media.forEach((m, i) => {
+                const btn = document.createElement('button');
+                btn.className = 'er-thumb' + (i === idx ? ' active' : '');
+                const thumbSrc = m.thumb || m.src;
+                btn.innerHTML = `<img src=\"${thumbSrc}&height=160\" alt=\"${m.alt}\">`;
+                btn.onclick = () => setHero(i);
+                rail.appendChild(btn);
+            });
+        }
+
+        function renderDots() {
+            if (!dots) return;
+            dots.innerHTML = '';
+            media.forEach((m, i) => {
+                const dot = document.createElement('button');
+                dot.className = 'er-mobile-dot' + (i === idx ? ' active' : '');
+                dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
+                dot.onclick = () => setHero(i);
+                dots.appendChild(dot);
+            });
+        }
+
+        function setHero(i) {
+            idx = i;
+            const item = media[i];
+            const isVideo = item.type === "video";
+            const isBottle = !!item.isBottle;
+
+            hero.style.display = isVideo ? 'none' : 'block';
+            heroVideo.style.display = isVideo ? 'block' : 'none';
+            hero.classList.toggle('is-bottle', !isVideo && isBottle);
+            heroVideo.classList.toggle('is-bottle', isVideo && isBottle);
+
+            if (isVideo) {
+                heroVideo.src = item.src;
+                heroVideo.setAttribute('aria-label', item.alt || 'Product video');
+                heroVideo.play().catch(() => { });
+            } else {
+                heroVideo.pause();
+                heroVideo.removeAttribute('src');
+                hero.src = item.src;
+                hero.alt = item.alt;
+            }
+            document.querySelectorAll('.er-thumb').forEach((t, n) => t.classList.toggle('active', n === i));
+            document.querySelectorAll('.er-mobile-dot').forEach((d, n) => d.classList.toggle('active', n === i));
+            const activeThumb = rail.querySelectorAll('.er-thumb')[i];
+            if (activeThumb) {
+                activeThumb.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+            }
+        }
+
+        function thumbStep() {
+            const first = rail.querySelector('.er-thumb');
+            if (!first) return 150;
+            const gap = parseFloat(window.getComputedStyle(rail).gap || '0');
+            return first.getBoundingClientRect().width + gap;
+        }
+
+        const mainPrev = document.querySelector('.er-prev');
+        const mainNext = document.querySelector('.er-next');
+        if (mainPrev && mainNext) {
+            mainPrev.onclick = () => setHero((idx - 1 + media.length) % media.length);
+            mainNext.onclick = () => setHero((idx + 1) % media.length);
+        }
+        if (thumbPrev && thumbNext) {
+            thumbPrev.onclick = () => rail.scrollBy({ left: -thumbStep(), behavior: 'smooth' });
+            thumbNext.onclick = () => rail.scrollBy({ left: thumbStep(), behavior: 'smooth' });
+        }
+
+        renderThumbs();
+        renderDots();
+        setHero(idx);
+
+        // ----- reviews media mobile slider arrows -----
+        const reviewMedia = document.querySelector('.reviews-media');
+        const reviewPrev = document.querySelector('.reviews-media-prev');
+        const reviewNext = document.querySelector('.reviews-media-next');
+
+        if (reviewMedia && reviewPrev && reviewNext) {
+            const scrollStep = () => {
+                const firstCard = reviewMedia.querySelector('.review-media-item');
+                if (!firstCard) return Math.max(reviewMedia.clientWidth * 0.72, 180);
+                const styles = window.getComputedStyle(reviewMedia);
+                const gap = parseFloat(styles.columnGap || styles.gap || "0");
+                return firstCard.getBoundingClientRect().width + gap;
+            };
+
+            const syncReviewNavState = () => {
+                const maxScrollLeft = reviewMedia.scrollWidth - reviewMedia.clientWidth - 1;
+                reviewPrev.disabled = reviewMedia.scrollLeft <= 0;
+                reviewNext.disabled = reviewMedia.scrollLeft >= maxScrollLeft;
+            };
+
+            reviewPrev.addEventListener('click', () => {
+                reviewMedia.scrollBy({ left: -scrollStep(), behavior: 'smooth' });
+            });
+            reviewNext.addEventListener('click', () => {
+                reviewMedia.scrollBy({ left: scrollStep(), behavior: 'smooth' });
+            });
+
+            reviewMedia.addEventListener('scroll', syncReviewNavState, { passive: true });
+            window.addEventListener('resize', syncReviewNavState);
+            syncReviewNavState();
+        }
+
+        (function () {
+            const section = document.querySelector('.collection-slider-section');
+            if (!section) return;
+
+            const track = section.querySelector('.collection-slider-track');
+            const prevBtn = section.querySelector('.collection-nav.prev');
+            const nextBtn = section.querySelector('.collection-nav.next');
+            if (!track || !prevBtn || !nextBtn) return;
+
+            const originalSlides = Array.from(track.querySelectorAll('.collection-slide'));
+            if (originalSlides.length < 2) return;
+
+            const getGap = () => {
+                const styles = window.getComputedStyle(track);
+                return parseFloat(styles.columnGap || styles.gap || '0');
+            };
+
+            const getStep = () => {
+                const firstSlide = track.querySelector('.collection-slide');
+                if (!firstSlide) return track.clientWidth * 0.9;
+                return firstSlide.getBoundingClientRect().width + getGap();
+            };
+
+            const cloneSlide = (slide) => {
+                const clone = slide.cloneNode(true);
+                clone.setAttribute('aria-hidden', 'true');
+                clone.querySelectorAll('a, button, input, select, textarea').forEach((el) => {
+                    el.setAttribute('tabindex', '-1');
+                });
+                return clone;
+            };
+
+            const beforeFrag = document.createDocumentFragment();
+            const afterFrag = document.createDocumentFragment();
+            originalSlides.forEach((slide) => {
+                beforeFrag.appendChild(cloneSlide(slide));
+                afterFrag.appendChild(cloneSlide(slide));
+            });
+
+            track.prepend(beforeFrag);
+            track.appendChild(afterFrag);
+
+            const loopDistance = () => originalSlides.length * getStep();
+
+            const setWithoutSnap = (left) => {
+                const previousSnap = track.style.scrollSnapType;
+                track.style.scrollSnapType = 'none';
+                track.scrollLeft = left;
+                requestAnimationFrame(() => {
+                    track.style.scrollSnapType = previousSnap || '';
+                });
+            };
+
+            const alignToMiddleSet = (logicalIndex = 0) => {
+                const step = getStep();
+                const safeIndex = ((logicalIndex % originalSlides.length) + originalSlides.length) % originalSlides.length;
+                setWithoutSnap(loopDistance() + safeIndex * step);
+            };
+
+            const getLogicalIndex = () => {
+                const step = getStep();
+                if (!step) return 0;
+                const raw = (track.scrollLeft - loopDistance()) / step;
+                return ((Math.round(raw) % originalSlides.length) + originalSlides.length) % originalSlides.length;
+            };
+
+            let settleTimer;
+            const snapIfNeeded = () => {
+                const step = getStep();
+                const distance = loopDistance();
+                const current = track.scrollLeft;
+                const leftEdge = distance - step * 0.25;
+                const rightEdge = distance * 2 - step * 0.25;
+
+                if (current < leftEdge) {
+                    setWithoutSnap(current + distance);
+                } else if (current >= rightEdge) {
+                    setWithoutSnap(current - distance);
+                }
+            };
+
+            const scheduleSnap = (delay) => {
+                window.clearTimeout(settleTimer);
+                settleTimer = window.setTimeout(snapIfNeeded, delay);
+            };
+
+            prevBtn.addEventListener('click', () => {
+                track.scrollBy({ left: -getStep(), behavior: 'smooth' });
+                scheduleSnap(440);
+            });
+
+            nextBtn.addEventListener('click', () => {
+                track.scrollBy({ left: getStep(), behavior: 'smooth' });
+                scheduleSnap(440);
+            });
+
+            track.addEventListener('scroll', () => {
+                scheduleSnap(120);
+            }, { passive: true });
+
+            let resizeTimer;
+            window.addEventListener('resize', () => {
+                window.clearTimeout(resizeTimer);
+                resizeTimer = window.setTimeout(() => {
+                    alignToMiddleSet(getLogicalIndex());
+                }, 120);
+            });
+
+            alignToMiddleSet(0);
+        })();
+
+        // ----- variant switch: update price and dynamic span -----
+        const radios = document.querySelectorAll('input[name="size"]');
+        const priceSpan = document.getElementById('dynamicPriceSpan');
+        const mainPrice = document.getElementById('productPrice');
+        const addToCartBtn = document.getElementById('addToCartBtn');
+        const saleBadge = document.querySelector('.sale-pr-info');
+
+        radios.forEach(radio => {
+            radio.addEventListener('change', (e) => {
+                const price = e.target.value;
+                if (priceSpan) priceSpan.innerText = '$' + price;
+                if (mainPrice) mainPrice.innerText = '$' + price;
+                if (saleBadge) {
+                    if (e.target.id === 'size50') {
+                        saleBadge.innerText = '20% OFF 50mL. APPLIED IN CART.';
+                    } else {
+                        saleBadge.innerText = '20% OFF 50mL. APPLIED IN CART.';
+                    }
+                }
+                document.querySelectorAll('.variant-label').forEach(l => l.classList.remove('active'));
+                if (e.target.nextElementSibling) e.target.nextElementSibling.classList.add('active');
+            });
+        });
+        const checkedSize = document.querySelector('input[name="size"]:checked');
+        if (checkedSize && checkedSize.nextElementSibling) {
+            checkedSize.nextElementSibling.classList.add('active');
+        }
+
+        const lengthButtons = document.querySelectorAll('.er-length-btn');
+        lengthButtons.forEach((btn) => {
+            btn.addEventListener('click', () => {
+                lengthButtons.forEach((item) => item.classList.remove('active'));
+                btn.classList.add('active');
+            });
+        });
+
+        const qtyValue = document.getElementById('erQtyValue');
+        const qtyMinus = document.getElementById('erQtyMinus');
+        const qtyPlus = document.getElementById('erQtyPlus');
+        const stepQty = (delta) => {
+            if (!qtyValue) return;
+            const current = Number(qtyValue.textContent.trim()) || 1;
+            const next = Math.max(1, current + delta);
+            qtyValue.textContent = String(next);
+        };
+        if (qtyMinus) qtyMinus.addEventListener('click', () => stepQty(-1));
+        if (qtyPlus) qtyPlus.addEventListener('click', () => stepQty(1));
+
+        // ----- accordion toggle -----
+        window.toggleAccordion = function (block) {
+            const summary = block.querySelector('.accordionLabel-summary');
+            const plus = block.querySelector('.plusLabelAccprdion');
+            if (block.classList.contains('open')) {
+                summary.style.display = 'none';
+                plus.innerText = '+';
+                block.classList.remove('open');
+            } else {
+                summary.style.display = 'block';
+                plus.innerText = '-';
+                block.classList.add('open');
+            }
+        }
+
+        // ----- (optional) add to cart alert -----
+        if (addToCartBtn) {
+            addToCartBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                alert('Product added to cart (demo).');
+            });
+        }
+    </script>
+
+    <!-- Bootstrap JS (optional for other components) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
+
