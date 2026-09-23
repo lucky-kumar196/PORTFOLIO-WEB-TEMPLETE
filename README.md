@@ -79,7 +79,7 @@ A sleek, dark-themed, modern personal portfolio website designed to showcase pro
 | Platform | Link |
 | :--- | :--- |
 | **Portfolio** | [lucky-portfolio.xo.je](http://lucky-portfolio.xo.je) |
-| **Email** | [your-email@example.com](mailto:luckykumarprajapat5@gmail.com) |
+| **Email** | [luckykumarprajapat5@gmail.com](mailto:luckykumarprajapat5@gmail.com) |
 | **GitHub** | [GitHub Profile](https://github.com/lucky-kumar196/) |
 
 ---
