@@ -83,4 +83,4 @@ A sleek, dark-themed, modern personal portfolio website designed to showcase pro
 | **GitHub** | [GitHub Profile](https://github.com/lucky-kumar196/) |
 
 ---
-*Created with ❤️ by Professional Designer & Developer.*
+*Created with ❤️ by Professional Designer & Developer Lucky.*
